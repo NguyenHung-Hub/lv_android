@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">DemoLayout</string>
+    <string name="thoat">Thoát</string>
+    <string name="nhap_ma">Nhập mã</string>
+    <string name="ho_ten">Họ tên</string>
+    <string name="gioi_tinh">Giới tính:</string>
+    <string name="don_vi">Đơn vị:</string>
+    <string name="nu">Nữ</string>
+    <string name="nam">Nam</string>
+    <string name="them">Thêm</string>
+    <string name="sua">Sửa</string>
+    <string name="xoa">Xóa</string>
+    <string name="lam_moi">Làm mới</string>
+    <string name="ghi_du_lieu">Ghi dữ liệu</string>
+    <string name="doc_du_lieu">Đọc dữ liệu</string>
+    <string name="chon_anh">Chọn ảnh</string>
+    <string name="anh_nhan_vien">Ảnh của nhân viên</string>
     <string-array name="don_vi_list">
         <item>Phòng kế toán</item>
         <item>Phòng tiếp thị</item>

@@ -11,26 +11,29 @@
         android:id="@+id/btnThoat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Thoát"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/darkBlue_dra"
+        android:text="@string/thoat"
+        android:textSize="16sp"
+
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_maSo"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:hint="Nhập mã"
+        android:hint="@string/nhap_ma"
         android:textSize="20sp"
 
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnThoat" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_hoTen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Họ tên"
+        android:hint="@string/ho_ten"
         android:textSize="20sp"
 
         app:layout_constraintTop_toBottomOf="@id/et_maSo" />
@@ -47,24 +50,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Giới tính: "
-            android:textSize="20sp" />
+            android:text="@string/gioi_tinh"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rb_nam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Nam"
+            android:text="@string/nam"
 
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rb_nu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nữ"
-            android:textSize="20sp" />
+            android:text="@string/nu"
+            android:textSize="16sp" />
     </RadioGroup>
 
     <LinearLayout
@@ -78,87 +82,152 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đơn vị:"
-            android:textSize="20sp" />
+            android:text="@string/don_vi"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <Spinner
             android:id="@+id/sp_donVi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-
+            android:layout_marginStart="8dp"
             android:background="@color/grey"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_layout" />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_chooseImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chon_anh"
+        android:textSize="16sp"
 
-    <LinearLayout
-        android:id="@+id/btn_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_donVi" />
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/grey"
+        android:contentDescription="@string/anh_nhan_vien"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hoTen" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_layout1"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="4dp"
 
-        android:orientation="vertical"
+
+
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_donVi">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_chooseImg">
 
 
         <LinearLayout
+            android:id="@+id/layout_btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <Button
+                android:id="@+id/btnRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/doc_du_lieu"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/btnWrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/ghi_du_lieu"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_btn1">
 
             <Button
                 android:id="@+id/btnThem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Thêm" />
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/them"
+                android:textSize="12dp"/>
 
             <Button
                 android:id="@+id/btnSua"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Sửa" />
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/sua"
+                android:textSize="12dp"/>
 
             <Button
                 android:id="@+id/btnXoa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Xóa" />
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/xoa"
+                android:textSize="12dp"/>
 
             <Button
                 android:id="@+id/btnLamMoi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Làm mới" />
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/darkBlue_dra"
+                android:text="@string/lam_moi"
+                android:textSize="12dp"/>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="420dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
 
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/btn_layout">
+        app:layout_constraintTop_toBottomOf="@+id/btn_layout1">
 
         <ListView
             android:id="@+id/lv_nhanVien"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:choiceMode="singleChoice"
             android:listSelector="@color/grey">
 
